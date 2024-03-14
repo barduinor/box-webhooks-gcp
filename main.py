@@ -61,6 +61,7 @@ def init(request):
 
     client = get_ccg_enterprise_client(ConfigCCG())
 
+    # make sure folder exists
     try:
         folder = client.folders.get_folder_by_id(folder_id)
     except BoxAPIError as e:
