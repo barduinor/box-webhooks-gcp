@@ -50,7 +50,12 @@ def init(request):
     if request_json and "folder_id" in request_json:
         folder_id = request_json["folder_id"]
     else:
-        return "Bad request", 400
+        return "Bad request, folder_id is mandatory", 400
+
+    if request_json and "url" in request_json:
+        url = request_json["url"]
+    else:
+        return "Bad request, url is mandatory", 400
 
     # folder id cannot be empty, 0 or None
     if not folder_id or folder_id == 0 or folder_id == "0" or folder_id == "":
@@ -59,6 +64,7 @@ def init(request):
             400,
         )
 
+    # get the client
     client = get_ccg_enterprise_client(ConfigCCG())
 
     # make sure folder exists
@@ -66,5 +72,7 @@ def init(request):
         folder = client.folders.get_folder_by_id(folder_id)
     except BoxAPIError as e:
         return (e.response_info.body, e.response_info.status_code)
+
+    #
 
     return folder.to_dict()
