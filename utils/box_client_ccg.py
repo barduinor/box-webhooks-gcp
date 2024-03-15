@@ -21,13 +21,17 @@ class ConfigCCG:
         self.enterprise_id = os.getenv("ENTERPRISE_ID")
         self.ccg_user_id = os.getenv("CCG_USER_ID")
 
+        # Webhooks Keys
+        self.key_a = os.getenv("KEY_A")
+        self.key_b = os.getenv("KEY_B")
+
 
 def __repr__(self) -> str:
     return f"ConfigCCG({self.__dict__})"
 
 
 def get_ccg_enterprise_client(config: ConfigCCG) -> BoxClient:
-    """Returns a boxsdk Client object"""
+    """Returns a box sdk Client object"""
 
     ccg = CCGConfig(
         client_id=config.client_id,
@@ -42,7 +46,7 @@ def get_ccg_enterprise_client(config: ConfigCCG) -> BoxClient:
 
 
 def get_ccg_user_client(config: ConfigCCG, user_id: str) -> BoxClient:
-    """Returns a boxsdk Client object"""
+    """Returns a box sdk Client object"""
 
     ccg = CCGConfig(
         client_id=config.client_id,

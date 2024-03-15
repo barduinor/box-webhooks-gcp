@@ -11,7 +11,7 @@
             "module": "functions_framework",
             "args": [
                 "--target",
-                "init",
+                "box_webhook",
                 "--debug"
             ]
         }
