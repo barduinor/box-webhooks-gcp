@@ -10,7 +10,7 @@ This project contains a workshop on integrating Box webhooks and GCP functions.
 
 ## Box configuration steps
 
-1. Create a [Box free account](https://www.box.com/pricing/individual) if you don't already have one.
+1. Create a [Box free developer account](https://account.box.com/signup/developer) if you don't already have one.
 2. Complete the registration process for a Box developer account.
 3. Making sure you're logged in navigate to the [Box Developer Console](https://app.box.com/developers/console). This will activate your developer account.
 4. Create a new Box application. Select Custom App, fill in the form and then click Next.
