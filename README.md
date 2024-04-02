@@ -4,8 +4,8 @@ style="margin-left:-10px;"
 width=40%;>
 
 
-# Box Webhooks and GCP functions
-This project contains a workshop on integrating Box webhooks and GCP functions.
+# Box webhooks and GCP Cloud Functions
+This project contains a workshop on integrating Box webhooks and GCP Cloud Functions.
 
 
 ## Box configuration steps
@@ -90,7 +90,7 @@ CCG_USER_ID: "YOUR_USER_ID"
 
 ## Workshop
 
-Reference the article [Working with GCP Functions and Box Webhooks](https://barbosa-rmv.medium.com/5f9a0fb2ae97), and go through the steps to complete the workshop.
+Reference the article [Working with GCP Cloud Functions and Box webhooks](https://barbosa-rmv.medium.com/5f9a0fb2ae97), and go through the steps to complete the workshop.
 
 
 ### Questions
